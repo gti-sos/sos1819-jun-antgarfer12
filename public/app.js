@@ -22,7 +22,7 @@ angular
         }).
         when("/charts/v1/motogp/", {
             controller: "ChartsCtrl",
-            templateUrl: "charts/charts.html"
+            templateUrl: "/charts/charts.html"
         }).
         when("/integrations/v1/motogp/", {
             controller: "IntegrationsCtrl",

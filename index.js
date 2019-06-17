@@ -1,6 +1,6 @@
 var express = require("express");
-//var request = require("request");
-//var cors = require("cors");
+var request = require("request");
+var cors = require("cors");
 var bodyParser = require("body-parser");
 var motoGpApi = require("./motogp-api");
 
