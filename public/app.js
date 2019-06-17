@@ -12,6 +12,10 @@ angular
             templateUrl: "info-integrations.html",
 
         }).
+        when("/infoanalytics", {
+            templateUrl: "info-analytics.html",
+
+        }).
         when("/ui/v1/motogp", {
             controller: "ListCtrl",
             templateUrl: "views/list.html"

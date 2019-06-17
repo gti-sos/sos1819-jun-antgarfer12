@@ -4,7 +4,7 @@ var app = angular.module("app");
 app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
     console.log("IntegrationsCtrl initicialized!");
 
-    var myApi = "https://sos1819-14.herokuapp.com/api/v1/motogp";
+    var myApi = "https://sos1819-jun-antgarfer12.herokuapp.com/api/v1/motogp";
     var api1 = "/proxy1";
     var api2 = "/proxy2";
     var api3 = "/proxy3";
