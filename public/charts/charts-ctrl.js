@@ -79,10 +79,10 @@ angular
                         function drawRegionsMap() {
                             var data = google.visualization.arrayToDataTable([
                                 ['Country', 'motogp'],
-                                ['Spain', dato[4]],
-                                ['France', dato[4]],
-                                ['Ireland', dato[4]],
-                                ['Italy', dato[4]]
+                                ['Spain', dato[2]],
+                                ['France', dato[1]],
+                                ['Ireland', dato[3]],
+                                ['Italy', dato[0]]
                             ]);
 
                             var options = {};

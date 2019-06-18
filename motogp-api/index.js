@@ -246,13 +246,13 @@ apiRest.register = (app, motogp) => {
 
 
     //POST /motogp/
-
+console.log("G");
     app.post(BASE_PATH, (req, res) => {
 
         var newMotogp = req.body;
         var circuit = req.body.circuit;
         var year = req.body.year;
-
+console.log("H");
         motogp.find({ circuit: circuit, year: year }).toArray((err, motogpArray) => {
             if (err) {
                 console.log(err);
@@ -271,13 +271,14 @@ apiRest.register = (app, motogp) => {
             else {
 
                 motogp.insert(newMotogp);
-
+console.log("I");
                 res.sendStatus(201);
             }
         });
+console.log("J");
     });
 
-
+console.log("K");
 
     //POST /circuit/Jerez
     app.post(BASE_PATH + "/:circuit", (req, res) => {

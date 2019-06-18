@@ -1,8 +1,8 @@
 var app = angular.module("app");
-
-
+console.log("A");
 app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
     console.log("IntegrationsCtrl initicialized!");
+console.log("B");
 
     var myApi = "https://sos1819-jun-antgarfer12.herokuapp.com/api/v1/motogp";
     var api1 = "/proxy1";
@@ -21,7 +21,12 @@ app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
 
     //-------------------API grupo 6 - Jesus Ezcurra---------------------------------
     $http.get(api1).then(function(responseApi1) {
+console.log("C");
+
+
         $http.get(myApi).then(function(response) {
+console.log("D");
+
             var i;
             for (i = 0; i < responseApi1.data.length; i++) {
                 datoAux2.push(responseApi1.data[i].points);
@@ -30,6 +35,8 @@ app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
             for (i = 0; i < response.data.length; i++) {
                 datoAux.push(response.data[i].circuit);
             }
+console.log("E");
+
             Highcharts.chart('container', {
                 chart: {
                     type: 'bar'
@@ -88,9 +95,13 @@ app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
                     data: [datoAux2[0], datoAux2[1], datoAux2[2], datoAux2[3], datoAux2[4]]
                 }]
             });
+console.log("F");
 
         });
+console.log("G");
+
     });
+console.log("H");
 
 
 
@@ -422,3 +433,4 @@ app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
 
 
 }]);
+console.log("I");

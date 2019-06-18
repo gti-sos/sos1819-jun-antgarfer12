@@ -23,12 +23,14 @@ const client = new MongoClient(uri, { useNewUrlParser: true });
 
 
 var motogp;
-
+//A
 client.connect(err => {
     motogp = client.db("sos1819").collection("motogp-data");
     motoGpApi.register(app, motogp);
     console.log("Connected!");
+console.log("B");
 });
+console.log("C");
 
 //consumicion de API de Jesus Ezcurra con proxy
 
@@ -138,9 +140,10 @@ app.use("/proxyExterno3", function(req, res) {
   req.pipe(request(apiServerHost9)).pipe(res);
 });
 
-
+console.log("D");
 //====================================NO TOCAR===================================================
 app.listen(port, () => {                            //Arrancar el servidor
     console.log("I'm ready on port " + port); 
-
+console.log("E");
 });
+console.log("F");
