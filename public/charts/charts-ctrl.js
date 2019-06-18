@@ -100,7 +100,7 @@ angular
                     $http.get(API).then(function(response) {
                         var i;
                         for (i = 0; i < response.data.length; i++) {
-                            datos.push({ x: response.data[i].crash, y: response.data[i].first, z: response.data[i].year, name: response.data[i].circuit });
+                            datos.push({ x: response.data[i].crash, y: response.data[i].year, z:"10" , name: response.data[i].circuit });
                         }
 
                         console.log(datos);
@@ -110,7 +110,7 @@ angular
                             zoomEnabled: true,
                             theme: "light2",
                             title: {
-                                text: "Capitalization And Education Expense"
+                                text: ""
                             },
                             axisX: {
                                 title: "",
