@@ -10,11 +10,9 @@ var app = express();
 
 app.use("/", express.static(__dirname + "/public"));
 
-
 app.use("/ui/v1/motogp", express.static(path.join(__dirname, "/public/views")));
-
-
 app.use(bodyParser.json());
+app.use(cors());
 
 var port = process.env.PORT || 8080;
 const MongoClient = require("mongodb").MongoClient;

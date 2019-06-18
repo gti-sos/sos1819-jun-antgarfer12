@@ -100,7 +100,8 @@ angular
                     $http.get(API).then(function(response) {
                         var i;
                         for (i = 0; i < response.data.length; i++) {
-                            datos.push({ x: response.data[i].crash, y: response.data[i].year, z:"10" , name: response.data[i].circuit });
+                            datos.push({ x: response.data[i].crash, y: response.data[i].year, z:10 , name: response.data[i].circuit });
+                            console.log(response.data[i].crash);
                         }
 
                         console.log(datos);
@@ -122,14 +123,14 @@ angular
                             axisY: {
                                 title: "",
                                 suffix: "",
-                                minimum: 0,
-                                maximum: 100,
+                                minimum: 2009,
+                                maximum: 2019,
                                 gridThickness: 1
 
                             },
                             data: [{
                                 type: "bubble",
-                                toolTipContent: "<b>{name}</b><br/>Number: {x}  <br/> Lifes: {y} . <br/> Year: {z}",
+                                toolTipContent: "<b>{name}</b><br/>Crash: {x}  <br/> Year: {y} . <br/> Number: {z}",
                                 dataPoints: datos
                             }]
                         });
