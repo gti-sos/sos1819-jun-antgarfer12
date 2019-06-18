@@ -365,7 +365,7 @@ app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
         });
     });
 
-
+/*
     //9-INTEGRACION CON API EXTERNA 2
     var income = [];
     var label = [];
@@ -374,7 +374,7 @@ app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
         $http.get(myApi).then(function(response1) {
 
             for (var i = 0; i < response.data.length; i++) {
-                income.push(response.data[i].number);
+                income.push(response.data[i].crash);
             }
             for (var i = 0; i < response1.data.length; i++) {
                 label.push(response1.data[i].circuit);
@@ -418,7 +418,7 @@ app.controller("IntegrationsCtrl", ["$scope", "$http", function($scope, $http) {
                 }
             });
         });
-    });
+    });*/
 
 
 }]);
